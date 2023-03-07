@@ -1,0 +1,77 @@
+﻿@using Category_Type_Project.ViewModels;
+@model RegisterViewModel
+@{
+    Layout = null;
+}
+<link href="~/css/style.css" rel="stylesheet" />
+<div class="center">
+
+        <header class="flex-center"> Register</header>
+
+        <form class="form" id="registerForm" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="txt_field">
+                <label asp-for="FirstName">الاسم الأول</label>
+                <input type="text" placeholder="ادخل الاسم الأول" asp-for="FirstName" autocomplete="username" aria-required="true" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+
+            <div class="txt_field">
+                <label asp-for="LastName">الاسم الأخير</label>
+                <input type="text" placeholder="ادخل الاسم الأخير" asp-for="LastName" autocomplete="username" aria-required="true" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+
+            <div class="txt_field">
+                <label asp-for="Email">البريد الالكتروني</label>
+                <input type="text" placeholder="ادخل البريد الالكتروني" asp-for="Email" autocomplete="username" aria-required="true" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+            <div class="txt_field">
+                <label asp-for="Password"> الرقم السري </label>
+                <input type="password" placeholder="ادخل الرقم السري" asp-for="Password" autocomplete="new-password" aria-required="true" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+
+            <div class="txt_field">
+                <label asp-for="ConfirmPassword"> تأكيد الرقم السري </label>
+                <input type="password" placeholder="أعد ادخال الرقم السري" asp-for="ConfirmPassword" autocomplete="new-password" aria-required="true" />
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+            <div class="signup_link">
+                <input id="registerSubmit" type="submit"/>
+            </div>
+        </form>
+</div>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+
+@*<div class="center">
+    <h1>Login</h1>
+    <form method="post">
+        <div class="txt_field">
+            <input type="text" asp-for="Email" required>
+            <span></span>
+            <label>Email</label>
+        </div>
+        <div class="txt_field">
+            <input type="password" asp-for="Password" required>
+            <span></span>
+            <label>Password</label>
+        </div>
+        <input type="submit" value="Login">
+        <div class="signup_link">
+            Not a member? <a href="#">Signup</a>
+        </div>
+    </form>
+</div>*@
+
+
+
+

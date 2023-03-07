@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Category Type Project.props" />
+</Project>

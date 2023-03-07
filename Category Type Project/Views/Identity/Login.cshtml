@@ -1,0 +1,32 @@
+﻿@using Category_Type_Project.ViewModels;
+@model LoginViewModel
+@{
+    Layout = null;
+}
+<link href="~/css/style.css" rel="stylesheet" />
+
+<div class="center">
+    <h1>Login</h1>
+    <form method="post">
+        <div class="txt_field">
+            <input type="text" asp-for="Email" required>
+            <span></span>
+            <label>Email</label>
+        </div>
+        <div class="txt_field">
+            <input type="password" asp-for="Password" required>
+            <span></span>
+            <label>Password</label>
+        </div>
+        <input type="submit" value="Login">
+        <div class="signup_link">
+            Not a member? < <a class="nav-link text-dark" asp-area="" asp-controller="Identity" asp-action="Register">Register</a>
+        </div>
+    </form>
+</div>
+
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
